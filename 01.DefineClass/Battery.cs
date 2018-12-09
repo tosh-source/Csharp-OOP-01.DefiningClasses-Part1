@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DefineClass
 {
-    class Battery
+    class BatteryCharacteristics
     {
+        internal const string batteryModel = "";
+        internal const int hoursIdle = 0;
+        internal const int hoursTalk = 0;
     }
 }
