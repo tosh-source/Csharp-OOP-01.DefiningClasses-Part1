@@ -2,11 +2,11 @@
 
 namespace DefineClass
 {
-    class MainClass
+    class GSM
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("");
+
         }
     }
 }
