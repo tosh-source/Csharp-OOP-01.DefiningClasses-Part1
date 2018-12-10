@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DefineClass
 {
-    class DisplayCharacteristics
+    internal static class Display
     {
-        internal const string displaySize = "";
-        internal const string displayColors = "";
+        internal const string displaySize = "2.4 inches";
+        internal const string displayColors = "16M";
     }
 }
