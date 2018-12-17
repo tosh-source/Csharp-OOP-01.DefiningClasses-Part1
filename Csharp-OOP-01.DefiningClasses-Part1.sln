@@ -2,33 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DefineClass", "01.DefineClass\01.DefineClass.csproj", "{BBC68060-96E4-4A3F-8DEC-4FE588BD811E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Constructors", "02.Constructors\02.Constructors.csproj", "{CEF2207D-B2FB-47BB-9D51-1400B862C622}"
-EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Debug|x86 = Debug|x86
-		Release|Any CPU = Release|Any CPU
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BBC68060-96E4-4A3F-8DEC-4FE588BD811E}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{BBC68060-96E4-4A3F-8DEC-4FE588BD811E}.Debug|x86.ActiveCfg = Debug|x86
-		{BBC68060-96E4-4A3F-8DEC-4FE588BD811E}.Debug|x86.Build.0 = Debug|x86
-		{BBC68060-96E4-4A3F-8DEC-4FE588BD811E}.Release|Any CPU.ActiveCfg = Release|x86
-		{BBC68060-96E4-4A3F-8DEC-4FE588BD811E}.Release|x86.ActiveCfg = Release|x86
-		{BBC68060-96E4-4A3F-8DEC-4FE588BD811E}.Release|x86.Build.0 = Release|x86
-		{CEF2207D-B2FB-47BB-9D51-1400B862C622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CEF2207D-B2FB-47BB-9D51-1400B862C622}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CEF2207D-B2FB-47BB-9D51-1400B862C622}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CEF2207D-B2FB-47BB-9D51-1400B862C622}.Debug|x86.Build.0 = Debug|Any CPU
-		{CEF2207D-B2FB-47BB-9D51-1400B862C622}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CEF2207D-B2FB-47BB-9D51-1400B862C622}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CEF2207D-B2FB-47BB-9D51-1400B862C622}.Release|x86.ActiveCfg = Release|Any CPU
-		{CEF2207D-B2FB-47BB-9D51-1400B862C622}.Release|x86.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
