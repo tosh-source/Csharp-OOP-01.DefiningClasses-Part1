@@ -4,12 +4,12 @@ namespace HomeworkMobilePhone
 {
     class GSM
     {
-        internal string model;
-        internal string manufacturer;
-        internal string price;
-        internal string owner;
-        Battery battery = new Battery();
-        Display display = new Display();
+        private string model;
+        private string manufacturer;
+        private string price;
+        private string owner;
+        private Battery battery;
+        private Display display;
 
 
         public static void Main(string[] args)
