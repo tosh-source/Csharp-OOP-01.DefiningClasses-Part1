@@ -2,7 +2,7 @@
 
 namespace HomeworkMobilePhone
 {
-    internal class Battery
+    public class Battery
     {
         internal string batteryModel;
         internal int hoursIdle;

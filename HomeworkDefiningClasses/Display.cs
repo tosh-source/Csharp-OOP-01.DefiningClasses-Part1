@@ -2,7 +2,7 @@
 
 namespace HomeworkMobilePhone
 {
-    internal class Display
+    public class Display
     {
         internal string displaySize;
         internal string displayColors;
