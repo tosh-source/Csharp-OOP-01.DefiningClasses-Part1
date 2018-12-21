@@ -11,7 +11,8 @@ namespace testApp
     {
         static void Main(string[] args)
         {
-            var test = new GSM("", "", "43", owner: "frank");
+            var gsm = new GSM("S 7 Edge", "Samsung", "500$", owner: "Frank");
+            Console.WriteLine(gsm.ToString());
         }
     }
 }

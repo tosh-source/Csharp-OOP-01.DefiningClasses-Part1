@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace HomeworkMobilePhone
 {
@@ -48,7 +49,21 @@ namespace HomeworkMobilePhone
 
         public static void Main(string[] args)
         {
-            GSM gsm = new GSM("aa", "bb");
+
+        }
+
+        public override string ToString()
+        {
+            var result = new StringBuilder();
+
+            result.AppendLine("Model: " + Model);
+            result.AppendLine("Manufacturer: " + Manufacturer);
+            result.AppendLine("Price: " + Price);
+            result.AppendLine("Owner: " + Owner);
+            result.AppendLine("Battery Specification: " + BatterySpec);
+            result.AppendLine("Display Specification: " + DisplaySpec);
+
+            return result.ToString();
         }
     }
 }
