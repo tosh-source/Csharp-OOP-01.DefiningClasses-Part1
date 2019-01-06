@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace HomeworkMobilePhone
 {
@@ -15,18 +16,66 @@ namespace HomeworkMobilePhone
         public string Model
         {
             get { return model; }
-            set { model = value; }
+
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException();
+                }
+
+                model = value;
+            }
         }
 
         public string Manufacturer
         {
             get { return manufacturer; }
-            set { manufacturer = value; }
+
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException();
+                }
+
+                manufacturer = value;
+            }
         }
 
-        public string Price { get; set; }
+        public string Price
+        {
+            get { return price; }
 
-        public string Owner { get; set; }
+            set
+            {
+                if (value != null)
+                {
+
+                }
+                else if (!(Regex.IsMatch(value, @"\d")))  //check if there is no digit
+                {
+                    throw new ArgumentException();
+                }
+
+                this.price = value;
+            }
+        }
+
+        public string Owner
+        {
+            get { return owner; }
+
+            set
+            {
+                if (value != string.Empty)
+                {
+                    throw new ArgumentException();
+                }
+
+                this.owner = value;
+            }
+        }
 
         public Battery BatterySpec { get; set; }
 
