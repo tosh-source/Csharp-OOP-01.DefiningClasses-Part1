@@ -77,9 +77,27 @@ namespace HomeworkMobilePhone
             }
         }
 
-        public Battery BatterySpec { get; set; }
+        public Battery BatterySpec
+        {
+            get { return batterySpec; }
 
-        public Display DisplaySpec { get; set; }
+            set
+            {
+
+                this.batterySpec = value;
+            }
+        }
+
+        public Display DisplaySpec
+        {
+            get { return displaySpec; }
+
+            set
+            {
+
+                this.displaySpec = value;
+            }
+        }
 
 
         public GSM(string model, string manufacturer) : this(model, manufacturer, null, null, null, null)
@@ -105,12 +123,12 @@ namespace HomeworkMobilePhone
         {
             var result = new StringBuilder();
 
-            result.AppendLine("Model: " + Model);
-            result.AppendLine("Manufacturer: " + Manufacturer);
-            result.AppendLine("Price: " + Price);
-            result.AppendLine("Owner: " + Owner);
-            result.AppendLine("Battery Specification: " + BatterySpec);
-            result.AppendLine("Display Specification: " + DisplaySpec);
+            result.AppendLine("Model: " + this.Model);
+            result.AppendLine("Manufacturer: " + this.Manufacturer);
+            result.AppendLine("Price: " + this.Price);
+            result.AppendLine("Owner: " + this.Owner);
+            result.AppendLine("Battery Specification: " + this.BatterySpec);
+            result.AppendLine("Display Specification: " + this.DisplaySpec);
 
             return result.ToString();
         }
