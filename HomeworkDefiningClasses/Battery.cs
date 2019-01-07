@@ -44,7 +44,7 @@ namespace HomeworkMobilePhone
         {
             var result = new StringBuilder();
 
-            if (BatteryModel == null)
+            if (BatteryModel == null || BatteryModel == string.Empty)
             {
                 result.AppendLine("There is no battery information.");
             }
