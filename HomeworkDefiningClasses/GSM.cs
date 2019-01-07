@@ -68,7 +68,7 @@ namespace HomeworkMobilePhone
 
             set
             {
-                if (value != string.Empty)
+                if (value == string.Empty)
                 {
                     throw new ArgumentException();
                 }
