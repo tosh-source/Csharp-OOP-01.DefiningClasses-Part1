@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace HomeworkMobilePhone
 {
@@ -41,8 +42,36 @@ namespace HomeworkMobilePhone
 
         public override string ToString()
         {
+            var result = new StringBuilder();
 
-            return base.ToString();
+            if (BatteryModel == null)
+            {
+                result.AppendLine("There is no battery information.");
+            }
+            else
+            {
+                result.AppendLine("Battery Model: " + this.BatteryModel);
+            }
+
+            if (HoursIdle == 0)
+            {
+                result.AppendLine("There is no information about \"Idle Hours\".");
+            }
+            else
+            {
+                result.AppendLine("\"Idle Hours\": " + this.HoursIdle);
+            }
+
+            if (HoursTalk == 0)
+            {
+                result.Append("There is no information about \"Talk Hours\".");
+            }
+            else
+            {
+                result.Append("\"Talk Hours\": " + this.HoursTalk);
+            }
+
+            return result.ToString();
         }
     }
 }
