@@ -8,6 +8,7 @@ namespace HomeworkMobilePhone
         private string batteryModel;
         private int hoursIdle;
         private int hoursTalk;
+        private BatteryType batteryType;
 
         public string BatteryModel
         {
@@ -39,6 +40,16 @@ namespace HomeworkMobilePhone
             }
         }
 
+        public BatteryType BatteryType
+        {
+            get { return batteryType; }
+
+            set
+            {
+                this.batteryType = value;
+            }
+        }
+
 
         public override string ToString()
         {
@@ -64,11 +75,20 @@ namespace HomeworkMobilePhone
 
             if (HoursTalk == 0)
             {
-                result.Append("There is no information about \"Talk Hours\".");
+                result.AppendLine("There is no information about \"Talk Hours\".");
             }
             else
             {
-                result.Append("\"Talk Hours\": " + this.HoursTalk);
+                result.AppendLine("\"Talk Hours\": " + this.HoursTalk);
+            }
+
+            if (BatteryType == BatteryType.NotDefined)
+            {
+                result.Append("Battery type is not defined.");
+            }
+            else
+            {
+                result.Append("BatteryType: " + this.BatteryType);
             }
 
             return result.ToString();

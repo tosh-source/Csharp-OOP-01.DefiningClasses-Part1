@@ -83,7 +83,6 @@ namespace HomeworkMobilePhone
 
             set
             {
-
                 this.batterySpec = value;
             }
         }
@@ -94,7 +93,6 @@ namespace HomeworkMobilePhone
 
             set
             {
-
                 this.displaySpec = value;
             }
         }

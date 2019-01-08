@@ -16,7 +16,7 @@ namespace testApp
             Console.WriteLine("First GSM\n" + gsm.ToString());
 
             var gsm2 = new GSM("S 7 Edge", "Samsung", "500$", owner: "Frank", 
-                                batterySpec: new Battery { BatteryModel = "LiPo", HoursIdle = 13, HoursTalk = 5 }, 
+                                batterySpec: new Battery { BatteryModel = "Samsung 3600mAh battery", HoursIdle = 48, HoursTalk = 10, BatteryType = BatteryType.LiIon }, 
                                 displaySpec: new Display());
             Console.WriteLine("\nSecond GSM\n" + gsm2.ToString());
         }
