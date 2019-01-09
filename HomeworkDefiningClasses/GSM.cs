@@ -6,6 +6,8 @@ namespace HomeworkMobilePhone
 {
     public class GSM
     {
+        //Fields
+        private static GSM iPhone4S;
         private string model;
         private string manufacturer;
         private string price;
@@ -13,6 +15,7 @@ namespace HomeworkMobilePhone
         private Battery batterySpec;
         private Display displaySpec;
 
+        //Properties
         public string Model
         {
             get { return model; }
@@ -97,6 +100,21 @@ namespace HomeworkMobilePhone
             }
         }
 
+        public static GSM IPhone4S
+        {
+            get
+            {
+                return iPhone4S;
+            }
+        }
+
+        //Constructors
+        static GSM()  //This is a static constructor, for IPhone4S field & property.
+        {
+            iPhone4S = new GSM("IPhone 4S", "Apple", "500$", "Me",
+                                new Battery { BatteryModel = "Apple 1430 mAh battery", BatteryType = BatteryType.LiIon, HoursIdle = 200, HoursTalk = 8 },
+                                new Display { DisplaySize = "3.5-inch (diagonal) Multi-Touch display", DisplayColors = "16M" });
+        }
 
         public GSM(string model, string manufacturer) : this(model, manufacturer, null, null, null, null)
         {
