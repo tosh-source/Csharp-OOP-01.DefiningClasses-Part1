@@ -4,7 +4,7 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkMobilePhone", "HomeworkDefiningClasses\HomeworkMobilePhone.csproj", "{B808AED6-B7AA-484F-8DE0-8E7F40082A66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testApp", "testApp\testApp.csproj", "{CF2FAA4C-28C3-4310-9D2F-880FF0E83CCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSMtest", "testApp\GSMtest.csproj", "{CF2FAA4C-28C3-4310-9D2F-880FF0E83CCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
