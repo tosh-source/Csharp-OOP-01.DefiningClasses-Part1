@@ -9,8 +9,8 @@ namespace HomeworkMobilePhone
     public class Call
     {
         //Fields
-        private DateTime date = DateTime.Now;
-        private DateTime time = DateTime.Now;
+        private DateTime date;
+        private DateTime time;
         private List<string> dialledPhoneNumber = new List<string>();
         private List<uint> duration = new List<uint>();  //duration in seconds
 
@@ -58,7 +58,8 @@ namespace HomeworkMobilePhone
         //Def. constructor
         public Call()
         {
-
+            this.date = DateTime.Now; //When create new instance of Call, date and time is set now.
+            this.time = DateTime.Now;
         }
     }
 }
