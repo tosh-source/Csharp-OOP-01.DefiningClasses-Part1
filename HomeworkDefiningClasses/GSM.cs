@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace HomeworkMobilePhone
 {
@@ -14,8 +15,17 @@ namespace HomeworkMobilePhone
         private string owner;
         private Battery batterySpec;
         private Display displaySpec;
+        private List<Call> callHistory;
 
         //Properties
+        public static GSM IPhone4S
+        {
+            get
+            {
+                return iPhone4S;
+            }
+        }
+
         public string Model
         {
             get { return model; }
@@ -100,14 +110,24 @@ namespace HomeworkMobilePhone
             }
         }
 
-        public static GSM IPhone4S
-        {
+        public List<Call> CallHistory  //See video (time 1:06:57) "OOP 2015 -> Съботен Workshop -> Домашно - Дефиниране на класове - част 1 - 21 март 2015 - Евлоги.mp4"
+        {                              //or follow link (time 1:06:57) : https://my.telerikacademy.com/Courses/LectureResources/Video/6115/%d0%92%d0%b8%d0%b4%d0%b5%d0%be-21-%d0%bc%d0%b0%d1%80%d1%82-2015-%d0%95%d0%b2%d0%bb%d0%be%d0%b3%d0%b8
             get
             {
-                return iPhone4S;
+                return new List<Call>(this.callHistory);
+            }
+            set
+            {
+                if (this.callHistory == null)
+                {
+                    this.callHistory = new List<Call>(); //if null, create an empty object " List<Call>()"
+                }
+
+                this.callHistory.Clear();  //then, if there is previous elements, clear it..
+                this.callHistory = value;  //after that, assign the value
             }
         }
-
+        
         //Constructors
         static GSM()  //This is a static constructor, for IPhone4S field & property.
         {
