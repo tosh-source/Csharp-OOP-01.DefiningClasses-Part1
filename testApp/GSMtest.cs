@@ -27,6 +27,9 @@ namespace testApp
 
             //Third GSM
             Console.WriteLine("\n" + GSM.IPhone4S);
+
+            //Manipulate Call (history) class
+            Console.WriteLine(gsm[1].CallHistory);
         }
     }
 }

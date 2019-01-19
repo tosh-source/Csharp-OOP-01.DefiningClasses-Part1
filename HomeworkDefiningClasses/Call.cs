@@ -11,8 +11,8 @@ namespace HomeworkMobilePhone
         //Fields
         private DateTime date;
         private DateTime time;
-        private List<string> dialledPhoneNumber = new List<string>();
-        private List<uint> duration = new List<uint>();  //duration in seconds
+        private string dialedPhoneNumber;
+        private decimal duration;  //duration in seconds
 
         //Property
         public string Date
@@ -31,19 +31,19 @@ namespace HomeworkMobilePhone
             }
         }
 
-        public List<string> DialledPhoneNumber
+        public string DialedPhoneNumber
         {
             get
             {
-                return this.dialledPhoneNumber;
+                return this.dialedPhoneNumber;
             }
             set
             {
-                this.dialledPhoneNumber = value;
+                this.dialedPhoneNumber = value;
             }
         }
 
-        public List<uint> Duration
+        public decimal Duration
         {
             get
             {
@@ -60,6 +60,26 @@ namespace HomeworkMobilePhone
         {
             this.date = DateTime.Now; //When create new instance of Call, date and time is set now.
             this.time = DateTime.Now;
+        }
+
+        public override string ToString()
+        {
+            string result = string.Empty;
+
+            if (DialedPhoneNumber != null)
+            {
+                result += "Dialed phone number: " + this.DialedPhoneNumber + Environment.NewLine;
+            }
+
+            if (Duration != 0)
+            {
+                result += "Call duration: " + this.Duration + Environment.NewLine;
+            }
+
+            result += "Call date: " + this.Date + Environment.NewLine;
+            result += "Call time: " + this.Time + Environment.NewLine;
+
+            return result;
         }
     }
 }
