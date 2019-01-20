@@ -29,7 +29,20 @@ namespace testApp
             Console.WriteLine("\n" + GSM.IPhone4S);
 
             //Manipulate Call (history) class
-            Console.WriteLine(gsm[1].CallHistory);
+            Call call = new Call();
+            Console.WriteLine(call.Date);
+            Console.WriteLine(call.DialedPhoneNumber);
+
+            //Check ENCAPSULATION in CallHistory property (in GSM class)
+            //========================================
+            //gsm[1].CallHistory.Add(new Call());
+            //foreach (var item in gsm[1].CallHistory)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //========================================
+            //Note: replace "return new List<Call>(this.callHistory);" with -> "return this.callHistory;" in CallHistory property and run above commented code again.
+
         }
     }
 }

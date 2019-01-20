@@ -114,7 +114,7 @@ namespace HomeworkMobilePhone
         {                              //or follow link (time 1:06:57) : https://my.telerikacademy.com/Courses/LectureResources/Video/6115/%d0%92%d0%b8%d0%b4%d0%b5%d0%be-21-%d0%bc%d0%b0%d1%80%d1%82-2015-%d0%95%d0%b2%d0%bb%d0%be%d0%b3%d0%b8
             get
             {
-                return new List<Call>(this.callHistory); //This technique is needed to prevent manipulation e.g., 
+                return new List<Call>(this.callHistory); //This technique is ENCAPSULATION, and is needed to prevent direct access to the object, when we get information. Unless we have a special method for this operation, created by us (e.g.: Add, Adding, AddCallInfo and so on).
             }
             set
             {
