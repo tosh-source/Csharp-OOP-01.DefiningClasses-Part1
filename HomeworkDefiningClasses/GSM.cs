@@ -127,7 +127,7 @@ namespace HomeworkMobilePhone
                 this.callHistory = value;  //after that, assign the value
             }
         }
-        
+
         //Constructors
         static GSM()  //This is a static constructor, for IPhone4S field & property.
         {
@@ -154,6 +154,32 @@ namespace HomeworkMobilePhone
         public static void Main(string[] args)
         {
 
+        }
+
+        public void AddCalls(Call call) //Adding information to CallHistory
+        {
+            this.callHistory.Add(call);
+        }
+        public void DeleteCalls(string numberForDeleting)
+        {
+            Call tempCall = new Call();
+            tempCall.DialedPhoneNumber = numberForDeleting;
+
+            bool isMatch = false;
+
+            for (int index = 0; index < this.callHistory.Count; index++)
+            {
+                isMatch = this.callHistory[index].DialedPhoneNumber == tempCall.DialedPhoneNumber;
+
+                if (isMatch == true)
+                {
+                    this.callHistory[index] = null;
+                }
+            }
+        }
+        public void ClearCallHistory()  //Clear CallHistory information
+        {
+            this.callHistory.Clear();
         }
 
         public override string ToString()

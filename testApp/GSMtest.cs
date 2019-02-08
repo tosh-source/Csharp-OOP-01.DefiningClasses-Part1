@@ -30,8 +30,13 @@ namespace testApp
 
             //Manipulate Call (history) class
             Call call = new Call();
+            call.DialedPhoneNumber = "0888997766";
+            gsm[1].AddCalls(call);
             Console.WriteLine(call.Date);
             Console.WriteLine(call.DialedPhoneNumber);
+            Console.WriteLine(gsm[1].CallHistory);
+            gsm[1].DeleteCalls("0888997766");
+            //gsm[1].ClearCallHistory();
 
             //Check ENCAPSULATION in CallHistory property (in GSM class)
             //========================================
