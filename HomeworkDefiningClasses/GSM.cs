@@ -173,7 +173,7 @@ namespace HomeworkMobilePhone
 
                 if (isMatch == true)
                 {
-                    this.callHistory[index] = null;
+                    this.callHistory.Remove(this.callHistory[index]);
                 }
             }
         }
