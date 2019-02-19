@@ -151,6 +151,7 @@ namespace HomeworkMobilePhone
             this.CallHistory = new List<Call>(); //The List of objects (List<Call>) can NOT be null, so we need to initialize it here.
         }
 
+        //Methods
         public static void Main(string[] args)
         {
 
@@ -182,6 +183,7 @@ namespace HomeworkMobilePhone
             this.callHistory.Clear();
         }
 
+        //Override methods
         public override string ToString()
         {
             var result = new StringBuilder();
@@ -192,6 +194,7 @@ namespace HomeworkMobilePhone
             result.AppendLine("Owner: " + this.Owner);
             result.AppendLine("Battery Specification: " + this.BatterySpec);
             result.AppendLine("Display Specification: " + this.DisplaySpec);
+            result.AppendLine("Call history information: " + this.CallHistory);
 
             return result.ToString();
         }
