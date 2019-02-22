@@ -35,9 +35,9 @@ namespace testApp
             Console.WriteLine(call.DialedPhoneNumber);
 
             gsm[1].AddCalls(call);                  //add call
-            Console.WriteLine(gsm[1].CallHistory);
+            Console.WriteLine(gsm[1].CallHistoryToString());
             gsm[1].DeleteCalls("0888997766");       //delete call by given number
-            Console.WriteLine(gsm[1].CallHistory);
+            Console.WriteLine(gsm[1].CallHistoryToString());
             gsm[1].ClearCallHistory();              //delete all calls from history
 
             //Check ENCAPSULATION in CallHistory property (in GSM class)

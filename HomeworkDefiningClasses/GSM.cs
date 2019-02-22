@@ -194,9 +194,17 @@ namespace HomeworkMobilePhone
             result.AppendLine("Owner: " + this.Owner);
             result.AppendLine("Battery Specification: " + this.BatterySpec);
             result.AppendLine("Display Specification: " + this.DisplaySpec);
-            result.AppendLine("Call history information: " + this.CallHistory);
+            result.AppendLine("Call history information: " + string.Join("", this.CallHistory));
 
             return result.ToString();
+        }
+
+        public string CallHistoryToString()
+        {
+            string result = string.Empty;
+            result = string.Join("", this.CallHistory);   //or use "foreach" loop intead of string.Join()
+
+            return result;
         }
     }
 }
