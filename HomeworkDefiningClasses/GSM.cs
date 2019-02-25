@@ -183,6 +183,17 @@ namespace HomeworkMobilePhone
             this.callHistory.Clear();
         }
 
+        public decimal CalculateTotalPrice(decimal pricePerMinute = 0.37m) 
+        {
+            decimal totalPrice = 0;
+            foreach (var call in this.callHistory)  
+            {
+                totalPrice += (pricePerMinute / 60) * call.Duration;  //Note that "Duration" is in seconds
+            }                                                         //EXAMPLE: if price per minute is: 0.25$ (0.25/60 = 0.00416$ per second)
+
+            return totalPrice;
+        }
+
         //Override methods
         public override string ToString()
         {
