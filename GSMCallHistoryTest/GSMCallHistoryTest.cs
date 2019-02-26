@@ -18,7 +18,7 @@ namespace GSMCallHistoryTest
                                 displaySpec: new Display());
 
             //12.2 Add few calls.
-            int countOfCalls = 5;
+            int countOfCalls = 8;
             Call[] allCalls = new Call[countOfCalls];
             int clientPhoneNumber = 889977550;
 
@@ -36,6 +36,8 @@ namespace GSMCallHistoryTest
             //12.3 Display the information about the calls.
             Console.WriteLine(s8.CallHistoryToString());
 
+            //12.4 Calculate and print the total price of the calls in the history. (the price per minute is 0.37$)
+            Console.WriteLine(s8.CalculateTotalPrice(pricePerMinute: 0.37m));
 
         }
     }

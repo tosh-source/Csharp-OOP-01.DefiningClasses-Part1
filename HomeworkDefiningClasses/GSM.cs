@@ -194,7 +194,7 @@ namespace HomeworkMobilePhone
                 totalPrice += (pricePerMinute / 60) * call.Duration;  //Note that "Duration" is in seconds
             }                                                         //EXAMPLE: if price per minute is: 0.25$ (0.25/60 = 0.00416$ per second)
 
-            return totalPrice;
+            return decimal.Round(totalPrice, 3);
         }
 
         //Override methods
