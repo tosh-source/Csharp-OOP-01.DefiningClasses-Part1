@@ -11,14 +11,14 @@ namespace GSMCallHistoryTest
     {
         static void Main(string[] args)
         { //Problem 12. Call history test
-            
+
             //12.1 Create an instance of the GSM class.
             GSM s8 = new GSM("Galaxy S8 Plus", "Samsung", "600$", owner: "Ben",
                                 batterySpec: new Battery { BatteryModel = "Samsung 3500mAh battery", HoursIdle = 96, HoursTalk = 27, BatteryType = BatteryType.LiIon },
                                 displaySpec: new Display());
 
             //12.2 Add few calls.
-            int countOfCalls = 8;
+            int countOfCalls = 7;
             Call[] allCalls = new Call[countOfCalls];
             int clientPhoneNumber = 889977550;
 
@@ -28,7 +28,7 @@ namespace GSMCallHistoryTest
                 allCalls[index] = new Call();
                 allCalls[index].DialedPhoneNumber = "0" + clientPhoneNumber;
 
-                allCalls[index].Duration = 10m + index;                       //duration is in seconds (start from 10 seconds for first call )
+                allCalls[index].Duration = 10 + index;                       //duration is in seconds (start from 10 seconds for first call )
             }
 
             s8.AddCalls(allCalls);
@@ -37,8 +37,16 @@ namespace GSMCallHistoryTest
             Console.WriteLine(s8.CallHistoryToString());
 
             //12.4 Calculate and print the total price of the calls in the history. (the price per minute is 0.37$)
-            Console.WriteLine(s8.CalculateTotalPrice(pricePerMinute: 0.37m));
+            Console.WriteLine("Total price of calls: " +
+                               s8.CalculateTotalPrice(pricePerMinute: 0.37m) + 
+                               "$");
 
+            //12.5 Remove the longest call from the history and calculate the total price again.
+            allCalls[0].Duration = 300;  //set first call(889977550) to 5 min. (this will be longest call in collection)
+
+            var longestCall = allCalls.OrderBy(x => x.Duration);
+            Console.WriteLine(longestCall);
         }
+
     }
 }
