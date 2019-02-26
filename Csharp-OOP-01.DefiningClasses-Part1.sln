@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkMobilePhone", "Home
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSMtest", "testApp\GSMtest.csproj", "{CF2FAA4C-28C3-4310-9D2F-880FF0E83CCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSMCallHistoryTest", "GSMCallHistoryTest\GSMCallHistoryTest.csproj", "{09ED8B23-C386-4778-8468-F13A95BDE4B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{CF2FAA4C-28C3-4310-9D2F-880FF0E83CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF2FAA4C-28C3-4310-9D2F-880FF0E83CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF2FAA4C-28C3-4310-9D2F-880FF0E83CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09ED8B23-C386-4778-8468-F13A95BDE4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09ED8B23-C386-4778-8468-F13A95BDE4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09ED8B23-C386-4778-8468-F13A95BDE4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09ED8B23-C386-4778-8468-F13A95BDE4B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

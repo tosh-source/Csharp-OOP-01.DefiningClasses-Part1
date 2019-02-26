@@ -157,9 +157,12 @@ namespace HomeworkMobilePhone
 
         }
 
-        public void AddCalls(Call call) //Adding information to CallHistory
+        public void AddCalls(params Call[] calls) //Adding information to CallHistory
         {
-            this.callHistory.Add(call);
+            foreach (var call in calls)
+            {
+                this.callHistory.Add(call); 
+            }
         }
         public void DeleteCalls(string numberForDeleting)
         {
