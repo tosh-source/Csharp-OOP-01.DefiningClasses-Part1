@@ -62,7 +62,7 @@ namespace HomeworkMobilePhone
 
             set
             {
-                if (value != null)
+                if (value == null)
                 {
 
                 }
