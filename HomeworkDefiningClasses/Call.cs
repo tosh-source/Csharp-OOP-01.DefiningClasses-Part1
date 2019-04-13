@@ -19,7 +19,7 @@ namespace HomeworkMobilePhone
         {
             get
             {
-                return this.date.ToString("HH.mm:SS");
+                return this.date.ToString("dd-MM-yyyy");
             }
         }
 
@@ -27,7 +27,7 @@ namespace HomeworkMobilePhone
         {
             get
             {
-                return this.time.ToString("dd-MM-yyyy");
+                return this.time.ToString("HH.mm:SS");
             }
         }
 
