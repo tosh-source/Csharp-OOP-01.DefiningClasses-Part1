@@ -81,7 +81,7 @@ namespace HomeworkMobilePhone
 
             set
             {
-                if (value == string.Empty)
+                if (value == string.Empty)  //In C# when value(string) == null, the "if" statement will simply return false. Unlike Java, same condition will throw an exception!!
                 {
                     throw new ArgumentException();
                 }
