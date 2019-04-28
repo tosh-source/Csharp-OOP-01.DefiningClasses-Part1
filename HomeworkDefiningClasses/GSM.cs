@@ -197,6 +197,14 @@ namespace HomeworkMobilePhone
             return decimal.Round(totalPrice, 3);
         }
 
+        public string CallHistoryToString()
+        {
+            string result = string.Empty;
+            result = string.Join("", this.CallHistory);   //or use "foreach" loop intead of string.Join()
+
+            return result;
+        }
+
         //Override methods
         public override string ToString()
         {
@@ -211,14 +219,6 @@ namespace HomeworkMobilePhone
             result.AppendLine("Call history information: " + string.Join("", this.CallHistory));
 
             return result.ToString();
-        }
-
-        public string CallHistoryToString()
-        {
-            string result = string.Empty;
-            result = string.Join("", this.CallHistory);   //or use "foreach" loop intead of string.Join()
-
-            return result;
-        }
+        }            
     }
 }
