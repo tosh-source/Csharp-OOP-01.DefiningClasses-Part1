@@ -27,7 +27,7 @@ namespace HomeworkMobilePhone
         {
             get
             {
-                return this.time.ToString("HH.mm:SS");
+                return this.time.ToString("HH.mm:ss");
             }
         }
 
